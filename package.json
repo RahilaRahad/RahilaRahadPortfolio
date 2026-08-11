@@ -1,0 +1,20 @@
+{
+  "name": "rahila-rahad-portfolio",
+  "version": "1.0.0",
+  "description": "3D Video Herosection & Personal Portfolio for Rahila Rahad",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js",
+    "serve": "node server.js"
+  },
+  "keywords": [
+    "portfolio",
+    "3d-animation",
+    "scroll-scrub",
+    "gsap",
+    "canvas"
+  ],
+  "author": "Rahila Rahad",
+  "license": "MIT"
+}

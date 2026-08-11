@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAHILA RAHAD — AI Content Creator & 3D Motion Artist</title>
+    <meta name="description" content="Portfolio of Rahila Rahad, featuring AI content creation, 3D visual art, and creative motion direction.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Grain Noise Texture Overlay -->
+    <div class="grain-overlay"></div>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor" id="cursor"></div>
+    <div class="custom-cursor-follower" id="cursor-follower"></div>
+
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="loader-content">
+            <div class="loader-brand">RAHILA RAHAD</div>
+            <div class="loader-track">
+                <div class="loader-bar" id="loader-bar"></div>
+            </div>
+            <div class="loader-status">
+                <span class="loader-text" id="loader-text">INITIALIZING 3D EXPERIENCE</span>
+                <span class="loader-percent" id="loader-percent">0%</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="site-header" id="header">
+        <div class="header-container">
+            <a href="#hero" class="brand-logo">
+                <span class="brand-name">RAHILA RAHAD</span>
+                <span class="brand-dot"></span>
+            </a>
+
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="#hero" class="nav-link active">Home</a></li>
+                    <li><a href="#works" class="nav-link">Projects</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#tools" class="nav-link">Tools</a></li>
+                    <li><a href="#certs" class="nav-link">Certifications</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <div class="status-pill">
+                    <span class="status-dot"></span>
+                    <span class="status-text">Available for Q3/Q4</span>
+                </div>
+                <a href="#contact" class="header-cta">Let's Talk</a>
+            </div>
+
+            <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Toggle Navigation">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav-drawer" id="mobile-drawer">
+        <div class="drawer-content">
+            <ul class="mobile-nav-links">
+                <li><a href="#hero" class="mobile-nav-link">Home</a></li>
+                <li><a href="#works" class="mobile-nav-link">Projects</a></li>
+                <li><a href="#about" class="mobile-nav-link">About</a></li>
+                <li><a href="#services" class="mobile-nav-link">Services</a></li>
+                <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+            </ul>
+            <div class="drawer-footer">
+                <div class="status-pill">
+                    <span class="status-dot"></span>
+                    <span class="status-text">Available for Projects</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <main id="main-content">
+        
+        <!-- HERO SECTION (Pin & Scroll Sequence) -->
+        <section class="hero-section" id="hero">
+            <div class="hero-container">
+                
+                <!-- LEFT SIDE: Text Content -->
+                <div class="hero-left-content" id="hero-left">
+                    <div class="eyebrow-wrapper">
+                        <span class="eyebrow-text" id="eyebrow">Hey, I Am</span>
+                    </div>
+
+                    <h1 class="hero-title" id="hero-title">
+                        <span class="title-line"><span class="char-wrap">R</span><span class="char-wrap">A</span><span class="char-wrap">H</span><span class="char-wrap">I</span><span class="char-wrap">L</span><span class="char-wrap">A</span></span>
+                        <span class="title-line accent-line"><span class="char-wrap">R</span><span class="char-wrap">A</span><span class="char-wrap">H</span><span class="char-wrap">A</span><span class="char-wrap">D</span></span>
+                    </h1>
+
+                    <div class="subtitle-wrapper" id="hero-subtitle">
+                        <span class="role-text">AI Content Creator</span>
+                    </div>
+
+                    <p class="hero-description" id="hero-desc">
+                        Crafting immersive digital visual narratives at the intersection of generative AI, high-fidelity 3D modeling, and editorial motion graphics for forward-thinking brands worldwide.
+                    </p>
+
+                    <div class="hero-actions" id="hero-actions">
+                        <a href="#works" class="btn-pill-outlined">
+                            <span class="btn-text">SEE MY PROJECTS</span>
+                            <span class="btn-icon">→</span>
+                            <div class="btn-hover-bg"></div>
+                        </a>
+
+                        <a href="#contact" class="btn-secondary-link">
+                            <span>Get in touch</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- RIGHT SIDE: Ambient 3D Motion Showreel Panel -->
+                <div class="hero-right-media" id="hero-right">
+                    <div class="showreel-container" id="media-frame">
+                        <div class="canvas-wrapper">
+                            <canvas id="hero-canvas"></canvas>
+                        </div>
+                        
+                        <!-- Dark Bottom Gradient Overlay -->
+                        <div class="showreel-bottom-gradient"></div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- STATS BAR SECTION -->
+        <section class="stats-bar-section">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="60">0+</span>
+                        <span class="stat-label">AI & 3D Creations</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="8">0+</span>
+                        <span class="stat-label">Global Collaborations</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="10">0+</span>
+                        <span class="stat-label">Client Satisfaction</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="6">0+</span>
+                        <span class="stat-label">Months Crafting Motion</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FEATURED PROJECTS / WORKS SECTION -->
+        <section class="works-section" id="works">
+            <div class="skills-watermark">WORKS</div>
+
+            <div class="container">
+                
+                <!-- Two-Column Top Header -->
+                <div class="works-header-grid">
+                    <div class="works-header-left">
+                        <div class="section-eyebrow" id="works-eyebrow">WORKS / 05</div>
+                        <h2 class="works-title" id="works-title">Creative <em>Projects</em></h2>
+                    </div>
+                    
+                    <div class="works-header-right">
+                        <p class="works-intro-p">
+                            I work as an <mark class="glow-highlight">AI Content Creator</mark>, creating high-quality <mark class="glow-highlight">AI-generated videos</mark>, <mark class="glow-highlight">AI-generated images</mark>, and strategic digital content for businesses, brands, and creators.
+                        </p>
+                        <p class="works-intro-p">
+                            My work focuses on combining <mark class="glow-highlight">Artificial Intelligence</mark> with <mark class="glow-highlight">creativity</mark> to produce content that is visually engaging, audience-focused, and results-driven.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Filter Tabs Row -->
+                <div class="works-filter-bar">
+                    <div class="filter-tabs" id="filter-tabs">
+                        <button class="filter-btn active" data-filter="all">ALL</button>
+                        <button class="filter-btn" data-filter="ai-video">AI VIDEO</button>
+                        <button class="filter-btn" data-filter="ai-image">AI IMAGE</button>
+                        <button class="filter-btn" data-filter="digital-content">DIGITAL CONTENT</button>
+                    </div>
+                    <div class="filter-line-track">
+                        <div class="filter-line-active" id="filter-line"></div>
+                    </div>
+                </div>
+
+                <!-- 3-Column Projects Grid -->
+                <div class="works-grid-3col" id="projects-grid">
+                    
+                    <!-- Project Card 01 -->
+                    <article class="project-card-item" data-category="ai-video">
+                        <div class="card-media-box">
+                            <div class="card-img-holder p1">
+                                <div class="badge-pill">
+                                    <span class="badge-dot"></span>
+                                    <span class="badge-label">AI VIDEO</span>
+                                </div>
+                            </div>
+                            <div class="card-hover-overlay">
+                                <a href="#contact" class="card-action-btn">View Case Study →</a>
+                            </div>
+                        </div>
+                        <div class="card-meta-info">
+                            <span class="project-num">01/</span>
+                            <h3 class="project-card-title">Cinematic AI Brand Video</h3>
+                            <p class="project-card-desc">
+                                A premium advertising commercial showcasing futuristic concept products using AI video tools.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Project Card 02 -->
+                    <article class="project-card-item" data-category="ai-image">
+                        <div class="card-media-box">
+                            <div class="card-img-holder p2">
+                                <div class="badge-pill">
+                                    <span class="badge-dot"></span>
+                                    <span class="badge-label">AI IMAGE</span>
+                                </div>
+                            </div>
+                            <div class="card-hover-overlay">
+                                <a href="#contact" class="card-action-btn">View Case Study →</a>
+                            </div>
+                        </div>
+                        <div class="card-meta-info">
+                            <span class="project-num">02/</span>
+                            <h3 class="project-card-title">Editorial Fashion Concepts</h3>
+                            <p class="project-card-desc">
+                                High-end visual designs and artistic layouts for an immersive digital fashion campaign.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Project Card 03 -->
+                    <article class="project-card-item" data-category="digital-content">
+                        <div class="card-media-box">
+                            <div class="card-img-holder p3">
+                                <div class="badge-pill">
+                                    <span class="badge-dot"></span>
+                                    <span class="badge-label">DIGITAL CONTENT</span>
+                                </div>
+                            </div>
+                            <div class="card-hover-overlay">
+                                <a href="#contact" class="card-action-btn">View Case Study →</a>
+                            </div>
+                        </div>
+                        <div class="card-meta-info">
+                            <span class="project-num">03/</span>
+                            <h3 class="project-card-title">Social Media Strategy & Content</h3>
+                            <p class="project-card-desc">
+                                A comprehensive brand expansion strategy and short-form scaling campaign built for social platforms.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Project Card 04 -->
+                    <article class="project-card-item" data-category="ai-video">
+                        <div class="card-media-box">
+                            <div class="card-img-holder p4">
+                                <div class="badge-pill">
+                                    <span class="badge-dot"></span>
+                                    <span class="badge-label">AI VIDEO</span>
+                                </div>
+                            </div>
+                            <div class="card-hover-overlay">
+                                <a href="#contact" class="card-action-btn">View Case Study →</a>
+                            </div>
+                        </div>
+                        <div class="card-meta-info">
+                            <span class="project-num">04/</span>
+                            <h3 class="project-card-title">Interactive AI Storytelling</h3>
+                            <p class="project-card-desc">
+                                Premium cinematic sequences and custom voice-synthesis integrations for digital creators.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Project Card 05 -->
+                    <article class="project-card-item" data-category="ai-image">
+                        <div class="card-media-box">
+                            <div class="card-img-holder p5">
+                                <div class="badge-pill">
+                                    <span class="badge-dot"></span>
+                                    <span class="badge-label">AI IMAGE</span>
+                                </div>
+                            </div>
+                            <div class="card-hover-overlay">
+                                <a href="#contact" class="card-action-btn">View Case Study →</a>
+                            </div>
+                        </div>
+                        <div class="card-meta-info">
+                            <span class="project-num">05/</span>
+                            <h3 class="project-card-title">Creative Concept Visuals</h3>
+                            <p class="project-card-desc">
+                                Immersive branding assets and design solutions using generative AI for corporate platforms.
+                            </p>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT ME SECTION -->
+        <section class="about-section" id="about">
+            <div class="about-watermark">ABOUT</div>
+            
+            <div class="container">
+                <div class="about-grid">
+                    
+                    <!-- LEFT COLUMN: Timeline & Milestone Nodes -->
+                    <div class="about-left-timeline">
+                        <div class="timeline-header">
+                            <span class="timeline-title">MILESTONES & EVOLUTION</span>
+                        </div>
+                        
+                        <div class="timeline-wrapper">
+                            <!-- Animated Line connecting nodes -->
+                            <div class="timeline-line-track">
+                                <div class="timeline-line-progress" id="timeline-progress"></div>
+                            </div>
+
+                            <!-- Milestone 1 -->
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <span class="timeline-tag">ACADEMIC FOUNDATION</span>
+                                    <h4 class="milestone-title">Bachelor's Degree</h4>
+                                    <p class="milestone-sub">University of Calicut</p>
+                                </div>
+                            </div>
+
+                            <!-- Milestone 2 -->
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <span class="timeline-tag">PROFESSIONAL DIPLOMA</span>
+                                    <h4 class="milestone-title">Aviation & Airport Management</h4>
+                                    <p class="milestone-sub">IATA Certified Qualification</p>
+                                </div>
+                            </div>
+
+                            <!-- Milestone 3 -->
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <span class="timeline-tag">INDUSTRY EXPERIENCE</span>
+                                    <h4 class="milestone-title">Visa Consultant</h4>
+                                    <p class="milestone-sub">Aviation & International Travel Sector</p>
+                                </div>
+                            </div>
+
+                            <!-- Milestone 4 -->
+                            <div class="timeline-item highlight-item">
+                                <div class="timeline-dot active-dot"></div>
+                                <div class="timeline-content">
+                                    <span class="timeline-tag">CURRENT ERA</span>
+                                    <h4 class="milestone-title">AI Content Creation & Motion</h4>
+                                    <p class="milestone-sub">Generative Visual Storytelling</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- RIGHT COLUMN: Storytelling Content -->
+                    <div class="about-right-content">
+                        <div class="section-eyebrow">ABOUT ME</div>
+                        <h2 class="about-heading" id="about-title">From Aviation to AI — <em>My Creative Journey</em></h2>
+                        
+                        <div class="about-paragraphs">
+                            <p class="about-p">
+                                My background originated in the high-precision world of aviation and international travel consultancy. Holding a Bachelor's Degree from the University of Calicut alongside an IATA-certified Diploma in Aviation & Airport Management, I developed a meticulous eye for structure, cross-cultural communication, and logistical excellence.
+                            </p>
+                            
+                            <p class="about-p">
+                                Driven by an undeniable passion for visual storytelling, I made a pivotal transition into digital media. By mastering generative algorithms, ComfyUI pipelines, and 3D motion design, I now transform complex ideas into <mark class="glow-highlight">cinematic AI videos</mark> and high-impact <mark class="glow-highlight">AI-generated content</mark>.
+                            </p>
+
+                            <p class="about-p">
+                                Today, I collaborate with global brands, creative agencies, and forward-looking studios to craft visuals that break traditional boundaries—merging analytical precision with artistic direction.
+                            </p>
+                        </div>
+
+                        <div class="skills-wrapper">
+                            <h4 class="skills-title">CORE DISCIPLINE & TOOLSET</h4>
+                            <div class="skills-tags">
+                                <span class="skill-tag">Generative AI Workflows</span>
+                                <span class="skill-tag">ComfyUI & Stable Diffusion</span>
+                                <span class="skill-tag">3D Motion Graphics</span>
+                                <span class="skill-tag">Cinema 4D / Redshift</span>
+                                <span class="skill-tag">Midjourney Prompt Engineering</span>
+                                <span class="skill-tag">Runway & Luma AI</span>
+                                <span class="skill-tag">Creative Direction</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS & EXPERTISE SECTION -->
+        <section class="skills-section" id="skills">
+            <div class="skills-watermark">SKILLS</div>
+            
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-eyebrow" id="skills-eyebrow">MY SKILLS</div>
+                    <h2 class="section-title" id="skills-title">Skills & <em>Expertise</em></h2>
+                </div>
+
+                <div class="skills-list-container">
+                    
+                    <!-- Skill Row 01 -->
+                    <div class="skill-row" data-index="01">
+                        <div class="skill-left">
+                            <span class="skill-num">01</span>
+                            <h3 class="skill-name">AI Content Creation</h3>
+                        </div>
+                        <div class="skill-right">
+                            <span class="skill-arrow">→</span>
+                        </div>
+                        <div class="skill-line-hover"></div>
+                    </div>
+
+                    <!-- Skill Row 02 -->
+                    <div class="skill-row" data-index="02">
+                        <div class="skill-left">
+                            <span class="skill-num">02</span>
+                            <h3 class="skill-name">AI Video Creation</h3>
+                        </div>
+                        <div class="skill-right">
+                            <span class="skill-arrow">→</span>
+                        </div>
+                        <div class="skill-line-hover"></div>
+                    </div>
+
+                    <!-- Skill Row 03 -->
+                    <div class="skill-row" data-index="03">
+                        <div class="skill-left">
+                            <span class="skill-num">03</span>
+                            <h3 class="skill-name">Prompt Engineering</h3>
+                        </div>
+                        <div class="skill-right">
+                            <span class="skill-arrow">→</span>
+                        </div>
+                        <div class="skill-line-hover"></div>
+                    </div>
+
+                    <!-- Skill Row 04 -->
+                    <div class="skill-row" data-index="04">
+                        <div class="skill-left">
+                            <span class="skill-num">04</span>
+                            <h3 class="skill-name">Vibe Coding</h3>
+                        </div>
+                        <div class="skill-right">
+                            <span class="skill-arrow">→</span>
+                        </div>
+                        <div class="skill-line-hover"></div>
+                    </div>
+
+                    <!-- Skill Row 05 -->
+                    <div class="skill-row" data-index="05">
+                        <div class="skill-left">
+                            <span class="skill-num">05</span>
+                            <h3 class="skill-name">Content Strategy</h3>
+                        </div>
+                        <div class="skill-right">
+                            <span class="skill-arrow">→</span>
+                        </div>
+                        <div class="skill-line-hover"></div>
+                    </div>
+
+                    <!-- Skill Row 06 -->
+                    <div class="skill-row" data-index="06">
+                        <div class="skill-left">
+                            <span class="skill-num">06</span>
+                            <h3 class="skill-name">Creative Storytelling</h3>
+                        </div>
+                        <div class="skill-right">
+                            <span class="skill-arrow">→</span>
+                        </div>
+                        <div class="skill-line-hover"></div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES SECTION -->
+        <section class="services-section" id="services">
+            <div class="services-watermark">SERVICES</div>
+            
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-eyebrow" id="services-eyebrow">SERVICES</div>
+                    <h2 class="section-title" id="services-title">What I <em>Offer</em></h2>
+                </div>
+
+                <div class="services-list-container">
+                    
+                    <!-- Service 01 -->
+                    <div class="service-editorial-row" data-preview="1" data-index="01">
+                        <div class="service-left-num">01</div>
+                        <div class="service-center-content">
+                            <h3 class="service-row-title">AI Content Creation</h3>
+                            <p class="service-row-desc">
+                                Creating engaging, high-quality AI-generated content tailored for businesses and brands to strengthen their online presence.
+                            </p>
+                        </div>
+                        <div class="service-right-arrow">
+                            <span class="arrow-icon">→</span>
+                        </div>
+                        <div class="service-line-hover"></div>
+                    </div>
+
+                    <!-- Service 02 -->
+                    <div class="service-editorial-row" data-preview="2" data-index="02">
+                        <div class="service-left-num">02</div>
+                        <div class="service-center-content">
+                            <h3 class="service-row-title">AI Video Production</h3>
+                            <p class="service-row-desc">
+                                Cinematic AI advertisements, product videos, and promotional content that capture attention and drive results.
+                            </p>
+                        </div>
+                        <div class="service-right-arrow">
+                            <span class="arrow-icon">→</span>
+                        </div>
+                        <div class="service-line-hover"></div>
+                    </div>
+
+                    <!-- Service 03 -->
+                    <div class="service-editorial-row" data-preview="3" data-index="03">
+                        <div class="service-left-num">03</div>
+                        <div class="service-center-content">
+                            <h3 class="service-row-title">Social Media Content</h3>
+                            <p class="service-row-desc">
+                                Platform-specific content including Instagram Reels, YouTube Shorts, Facebook Ads, and LinkedIn content — designed to grow your brand across channels.
+                            </p>
+                        </div>
+                        <div class="service-right-arrow">
+                            <span class="arrow-icon">→</span>
+                        </div>
+                        <div class="service-line-hover"></div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Floating Cursor Thumbnail Preview Card (Awwwards Style) -->
+            <div class="service-floating-preview" id="service-preview">
+                <div class="preview-card-inner p1-img" id="preview-img-1">
+                    <span class="preview-tag">AI CONTENT</span>
+                </div>
+                <div class="preview-card-inner p2-img" id="preview-img-2">
+                    <span class="preview-tag">CINEMATIC VIDEO</span>
+                </div>
+                <div class="preview-card-inner p3-img" id="preview-img-3">
+                    <span class="preview-tag">SOCIAL REELS</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 1: TOOLS & SOFTWARE -->
+        <section class="tools-section" id="tools">
+            <div class="skills-watermark">TOOLS</div>
+            
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-eyebrow" id="tools-eyebrow">TOOLS & SOFTWARE</div>
+                    <h2 class="section-title" id="tools-title">Tools I <em>Work With</em></h2>
+                </div>
+
+                <div class="tools-grid-container">
+                    <div class="tool-chip"><span class="chip-text">ChatGPT</span></div>
+                    <div class="tool-chip"><span class="chip-text">Gemini</span></div>
+                    <div class="tool-chip"><span class="chip-text">Claude</span></div>
+                    <div class="tool-chip"><span class="chip-text">Nano Banana OmniFlash</span></div>
+                    <div class="tool-chip"><span class="chip-text">Seedance</span></div>
+                    <div class="tool-chip"><span class="chip-text">Kling AI</span></div>
+                    <div class="tool-chip"><span class="chip-text">Flow</span></div>
+                    <div class="tool-chip"><span class="chip-text">Canva</span></div>
+                    <div class="tool-chip"><span class="chip-text">Adobe Photoshop</span></div>
+                    <div class="tool-chip"><span class="chip-text">CapCut</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: CERTIFICATIONS -->
+        <section class="certifications-section" id="certs">
+            <div class="skills-watermark">CERTS</div>
+            
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-eyebrow" id="certs-eyebrow">CERTIFICATIONS</div>
+                    <h2 class="section-title" id="certs-title">Learning & <em>Credentials</em></h2>
+                </div>
+
+                <div class="certs-list-container">
+                    
+                    <!-- Cert 01 -->
+                    <div class="cert-row" data-index="01">
+                        <div class="cert-left">
+                            <span class="cert-num">01</span>
+                            <h3 class="cert-name">AI Creation & Marketing</h3>
+                            <div class="cert-status-badge">
+                                <span class="pulse-dot"></span>
+                                <span class="status-label">Ongoing</span>
+                            </div>
+                        </div>
+                        <div class="cert-right">
+                            <span class="cert-arrow">→</span>
+                        </div>
+                        <div class="cert-line-hover"></div>
+                    </div>
+
+                    <!-- Cert 02 -->
+                    <div class="cert-row" data-index="02">
+                        <div class="cert-left">
+                            <span class="cert-num">02</span>
+                            <h3 class="cert-name">Prompt Engineering</h3>
+                        </div>
+                        <div class="cert-right">
+                            <span class="cert-arrow">→</span>
+                        </div>
+                        <div class="cert-line-hover"></div>
+                    </div>
+
+                    <!-- Cert 03 -->
+                    <div class="cert-row" data-index="03">
+                        <div class="cert-left">
+                            <span class="cert-num">03</span>
+                            <h3 class="cert-name">AI Content Creation</h3>
+                        </div>
+                        <div class="cert-right">
+                            <span class="cert-arrow">→</span>
+                        </div>
+                        <div class="cert-line-hover"></div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT & FOOTER SECTION -->
+        <section class="contact-section" id="contact">
+            <div class="container">
+                <div class="contact-card">
+                    <div class="contact-header">
+                        <h2 class="contact-title">Let’s create something <em>extraordinary together.</em></h2>
+                        <p class="contact-subtitle">Have an ambitious project in mind? Reach out directly and let's craft something unforgettable.</p>
+                    </div>
+
+                    <div class="contact-actions">
+                        <a href="mailto:hello@rahilarahad.com" class="btn-pill-outlined btn-large">
+                            <span class="btn-text">HELLO@RAHILARAHAD.COM</span>
+                            <span class="btn-icon">→</span>
+                            <div class="btn-hover-bg"></div>
+                        </a>
+                    </div>
+
+                    <div class="socials-wrapper">
+                        <a href="https://www.instagram.com/ai.hila/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i> Instagram</a>
+                        <a href="https://wa.me/916238394649" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                        <a href="https://www.behance.net/rahilarahad" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Behance"><i class="fab fa-behance"></i> Behance</a>
+                        <a href="https://www.linkedin.com/in/rahila-rahad-367829259/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Site Footer -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <div class="footer-left">
+                <span class="footer-logo">RAHILA RAHAD</span>
+                <span class="footer-copy">© 2026 Rahila Rahad. All rights reserved.</span>
+            </div>
+            <div class="footer-right">
+                <span class="footer-location">Dubai / Remote Worldwide</span>
+                <a href="#hero" class="back-to-top">Back to top ↑</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- GSAP & Lenis Smooth Scroll Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+</body>
+</html>
