@@ -5,6 +5,7 @@
   "main": "server.js",
   "scripts": {
     "dev": "node server.js",
+    "build": "echo 'Static site'",
     "start": "node server.js",
     "serve": "node server.js"
   },
