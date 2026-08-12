@@ -345,6 +345,63 @@ body.cursor-hover .custom-cursor-follower {
     transition: transform 0.3s, opacity 0.3s;
 }
 
+/* Mobile Navigation Drawer Overlay (Hidden by default) */
+.mobile-nav-drawer {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(10, 10, 10, 0.98);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    z-index: 99;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.4s var(--transition-smooth), visibility 0.4s var(--transition-smooth);
+}
+
+.mobile-nav-drawer.active {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+}
+
+.drawer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+.mobile-nav-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-nav-link {
+    font-family: var(--font-serif);
+    font-size: 2.2rem;
+    color: var(--text-white);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.mobile-nav-link:hover {
+    color: var(--accent-bronze);
+}
+
 /* HERO SECTION (SPLIT SCREEN & 3D CANVAS) */
 .hero-section {
     position: relative;

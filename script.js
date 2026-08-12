@@ -115,35 +115,77 @@ document.addEventListener('DOMContentLoaded', () => {
     const preloader = document.getElementById('preloader');
 
     function preloadImages() {
+        const priorityCount = 12; // Load first 12 frames immediately for instant playback
+        let priorityLoaded = 0;
+        let isStarted = false;
+
+        // Initialize array placeholders
         for (let i = 0; i < totalFrames; i++) {
+            images[i] = null;
+        }
+
+        function loadFrame(i, isPriority = false) {
             const img = new Image();
             img.src = getFramePath(i);
             
             img.onload = () => {
+                images[i] = img;
                 loadedCount++;
                 const percent = Math.floor((loadedCount / totalFrames) * 100);
                 
                 if (loaderBar) loaderBar.style.width = `${percent}%`;
                 if (loaderPercent) loaderPercent.textContent = `${percent}%`;
 
-                // Render initial frame as soon as frame 0 is ready
                 if (i === 0) {
                     setCanvasDimensions();
                 }
 
-                if (loadedCount === totalFrames) {
-                    onAssetsLoaded();
+                if (isPriority) {
+                    priorityLoaded++;
+                    if (priorityLoaded >= priorityCount && !isStarted) {
+                        isStarted = true;
+                        onAssetsLoaded();
+                        loadRemainingFrames();
+                    }
                 }
             };
 
             img.onerror = () => {
                 loadedCount++;
-                if (loadedCount === totalFrames) {
-                    onAssetsLoaded();
+                if (isPriority) {
+                    priorityLoaded++;
+                    if (priorityLoaded >= priorityCount && !isStarted) {
+                        isStarted = true;
+                        onAssetsLoaded();
+                        loadRemainingFrames();
+                    }
                 }
             };
+        }
 
-            images.push(img);
+        // 1. Priority load initial frames
+        for (let i = 0; i < priorityCount; i++) {
+            loadFrame(i, true);
+        }
+
+        // 2. Progressive background batch stream for remaining frames
+        function loadRemainingFrames() {
+            let currentIndex = priorityCount;
+            const batchSize = 10;
+
+            function loadNextBatch() {
+                if (currentIndex >= totalFrames) return;
+                const end = Math.min(totalFrames, currentIndex + batchSize);
+                for (let i = currentIndex; i < end; i++) {
+                    loadFrame(i, false);
+                }
+                currentIndex = end;
+                if (currentIndex < totalFrames) {
+                    setTimeout(loadNextBatch, 80);
+                }
+            }
+
+            setTimeout(loadNextBatch, 100);
         }
     }
 
