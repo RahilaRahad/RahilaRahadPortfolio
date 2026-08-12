@@ -1000,23 +1000,23 @@ body.cursor-hover .custom-cursor-follower {
 }
 
 .card-img-holder.p1 {
-    background: linear-gradient(135deg, #1A1412 0%, #3D2B1F 60%, #0D0B0A 100%);
+    background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.5) 100%), url('project_01.jpg') center/cover no-repeat;
 }
 
 .card-img-holder.p2 {
-    background: linear-gradient(135deg, #0F171E 0%, #2B1E19 60%, #17110E 100%);
+    background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.5) 100%), url('project_02.jpg') center/cover no-repeat;
 }
 
 .card-img-holder.p3 {
-    background: linear-gradient(135deg, #1C1917 0%, #443022 60%, #0F0D0C 100%);
+    background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.5) 100%), url('project_03.jpg') center/cover no-repeat;
 }
 
 .card-img-holder.p4 {
-    background: linear-gradient(135deg, #261D15 0%, #15100B 60%, #38281B 100%);
+    background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.5) 100%), url('project_04.jpg') center/cover no-repeat;
 }
 
 .card-img-holder.p5 {
-    background: linear-gradient(135deg, #181512 0%, #2D2118 60%, #0A0807 100%);
+    background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.5) 100%), url('project_05.jpg') center/cover no-repeat;
 }
 
 .badge-pill {
@@ -1676,15 +1676,15 @@ mark.glow-highlight.active {
 }
 
 .preview-card-inner.p1-img {
-    background: linear-gradient(135deg, #1A1412 0%, #3D2B1F 60%, #0D0B0A 100%);
+    background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.6) 100%), url('project_01.jpg') center/cover no-repeat;
 }
 
 .preview-card-inner.p2-img {
-    background: linear-gradient(135deg, #0F171E 0%, #2B1E19 60%, #17110E 100%);
+    background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.6) 100%), url('project_02.jpg') center/cover no-repeat;
 }
 
 .preview-card-inner.p3-img {
-    background: linear-gradient(135deg, #1C1917 0%, #443022 60%, #0F0D0C 100%);
+    background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.6) 100%), url('project_03.jpg') center/cover no-repeat;
 }
 
 .preview-tag {
