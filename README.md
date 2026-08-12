@@ -13,4 +13,4 @@ A luxury, high-performance personal portfolio website for **Rahila Rahad** — A
 - HTML5, CSS3, JavaScript (ES6+)
 - Node.js (Static HTTP Server)
 - GSAP & ScrollTrigger
-- Lenis Smooth Scroll
+- Lenis Smooth Scroll 
